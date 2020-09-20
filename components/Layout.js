@@ -34,9 +34,13 @@ function Layout({ meta, children }) {
         <meta name="description" context={meta.description} />
       </Head>
       <Breadcrumb mb={4}>
-        <Breadcrumb.Item href="#">GitHub.com</Breadcrumb.Item>
-        <Breadcrumb.Item href="#">Getting started</Breadcrumb.Item>
-        <Breadcrumb.Item href="#">Quickstart</Breadcrumb.Item>
+        <Breadcrumb.Item href="/en/github">GitHub.com</Breadcrumb.Item>
+        <Breadcrumb.Item href="/en/github/getting-started-with-github">
+          Getting started
+        </Breadcrumb.Item>
+        <Breadcrumb.Item href="/en/github/getting-started-with-github/quickstart">
+          Quickstart
+        </Breadcrumb.Item>
         <Breadcrumb.Item href="#" selected>
           Set up Git
         </Breadcrumb.Item>

@@ -26,22 +26,28 @@ const Sidebar = () => (
     </Flex>
     <Box mt={4} ml={2}>
       <SideNav variant="lightweight" backgroundColor="blue.9">
-        <SideNav.Link href="#" mb={2}>
+        <SideNav.Link href="/en/github/getting-started-with-github" mb={2}>
           <Text color="blue.2" fontSize="12px">
             GETTING STARTED
           </Text>
         </SideNav.Link>
-        <SideNav.Link href="#" mb={2}>
+        <SideNav.Link
+          href="/en/github/setting-up-and-managing-your-github-user-account"
+          mb={2}
+        >
           <Text color="blue.2" fontSize="12px">
             USER ACCOUNTS
           </Text>
         </SideNav.Link>
-        <SideNav.Link href="#" mb={2}>
+        <SideNav.Link
+          href="/en/github/setting-up-and-managing-your-github-profile"
+          mb={2}
+        >
           <Text color="blue.2" fontSize="12px">
             PROFILES
           </Text>
         </SideNav.Link>
-        <SideNav.Link href="#" mb={2}>
+        <SideNav.Link href="/en/github/authenticating-to-github" mb={2}>
           <Text color="blue.2" fontSize="12px">
             AUTHENTICATION
           </Text>
