@@ -1,9 +1,13 @@
-const withMDX = require('@next/mdx')({
-  extension: /\.mdx?$/
-})
-
-module.exports = withMDX({
-  pageExtensions: ['js', 'jsx', 'mdx'],
+module.exports = {
+  async redirects() {
+    return [
+      {
+        source: '/',
+        destination: '/set-up-git',
+        permanent: false
+      }
+    ]
+  },
   async rewrites() {
     return [
       // If the path exists, use the new page.
@@ -20,4 +24,4 @@ module.exports = withMDX({
       }
     ]
   }
-})
+}

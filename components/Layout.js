@@ -1,5 +1,5 @@
-import { MDXProvider } from '@mdx-js/react'
 import { Link, Heading, Breadcrumb } from '@primer/components'
+import Markdown from 'markdown-to-jsx'
 import NextLink from 'next/link'
 import Head from 'next/head'
 import { useRouter } from 'next/router'
@@ -30,7 +30,7 @@ function Layout({ meta, children }) {
   const router = useRouter()
 
   return (
-    <MDXProvider components={components}>
+    <>
       <Head>
         <title>{`${meta.title} – GitHub Docs`}</title>
         <meta charSet="utf-8" />
@@ -60,8 +60,14 @@ function Layout({ meta, children }) {
       <Heading as="h1" fontSize={6} mb={2}>
         {meta.title}
       </Heading>
-      {children}
-    </MDXProvider>
+      <Markdown
+        options={{
+          overrides: components
+        }}
+      >
+        {children}
+      </Markdown>
+    </>
   )
 }
 

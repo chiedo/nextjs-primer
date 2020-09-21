@@ -1,9 +1,7 @@
-import Layout from '~/components/Layout'
-
-export const meta = {
-  title: 'Set up Git',
-  description: 'Learn how to set up Git.'
-}
+---
+title: 'Set up Git'
+description: 'Learn how to set up Git.'
+---
 
 To use Git on the command line, you'll need to download, install, and configure Git on your computer. You can also install GitHub CLI to use GitHub from the command line. For more information on GitHub CLI, see the [GitHub CLI](https://cli.github.com/manual/) documentation.
 
@@ -18,9 +16,9 @@ If you don't need to work with files locally, GitHub lets you complete many Git-
 
 ## [Setting up Git](/en/github/getting-started-with-github/set-up-git#setting-up-git)
 
-1.  [Download and install the latest version of Git](https://git-scm.com/downloads).
-2.  [Set your username in Git](/en/articles/setting-your-username-in-git).
-3.  [Set your commit email address in Git](/en/articles/setting-your-commit-email-address).
+1.  [Download and install the latest version of Git](https://git-scm.com/downloads)
+2.  [Set your username in Git](/en/articles/setting-your-username-in-git)
+3.  [Set your commit email address in Git](/en/articles/setting-your-commit-email-address)
 
 ## [Next steps: Authenticating with GitHub from Git](/en/github/getting-started-with-github/set-up-git#next-steps-authenticating-with-github-from-git)
 
@@ -43,5 +41,3 @@ Congratulations, you now have Git and GitHub all set up! What do you want to do 
 - "[Fork a repository](/en/articles/fork-a-repo)"
 - "[Be social](/en/articles/be-social)"
 - Connect with people around the world in the [GitHub Community Support](https://github.community/)
-
-export default ({ children }) => <Layout meta={meta}>{children}</Layout>
