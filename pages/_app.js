@@ -75,6 +75,7 @@ const Header = () => (
         aria-label="Search topics, products..."
         name="search"
         placeholder="Search topics, products..."
+        minWidth="200px"
       />
     </Flex>
   </BorderBox>
