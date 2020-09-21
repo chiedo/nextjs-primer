@@ -2,6 +2,7 @@ import { MDXProvider } from '@mdx-js/react'
 import { Link, Heading, Breadcrumb } from '@primer/components'
 import NextLink from 'next/link'
 import Head from 'next/head'
+import { useRouter } from 'next/router'
 
 const A = (props) => {
   const href = props.href
@@ -20,18 +21,29 @@ const A = (props) => {
 
 const components = {
   a: A,
-  h2: (props) => <Heading fontSize={5} mb={2} {...props} />,
-  h3: (props) => <Heading as="h3" fontSize={4} mb={2} {...props} />,
-  h4: (props) => <Heading as="h4" fontSize={3} mb={2} {...props} />
+  h2: (props) => <Heading fontSize={4} mt={4} {...props} />,
+  h3: (props) => <Heading as="h3" fontSize={2} mt={4} {...props} />,
+  h4: (props) => <Heading as="h4" fontSize={2} mt={4} {...props} />
 }
 
 function Layout({ meta, children }) {
+  const router = useRouter()
+
   return (
     <MDXProvider components={components}>
       <Head>
         <title>{`${meta.title} – GitHub Docs`}</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="description" context={meta.description} />
+        <meta charSet="utf-8" />
+        <meta content="IE=edge" httpEquiv="X-UA-Compatible" />
+        <meta content="width=device-width, initial-scale=1" name="viewport" />
+        <meta name="robots" content="follow, index" />
+        <meta content={meta.description} name="description" />
+        <meta
+          property="og:url"
+          content={`https://nextjs-primer.vercel.app${router.asPath}`}
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="GitHub Docs" />
       </Head>
       <Breadcrumb mb={4}>
         <Breadcrumb.Item href="/en/github">GitHub.com</Breadcrumb.Item>
